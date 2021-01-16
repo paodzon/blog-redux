@@ -1,9 +1,10 @@
 import React from 'react'
+import PostList from './PostList'
 
 function App() {
     return (
         <div>
-            <h1>Initital App</h1>
+            <PostList/>
         </div>
     )
 }
