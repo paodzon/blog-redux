@@ -2,13 +2,13 @@ import React from 'react';
 import UserHeader from './UserHeader';
 import './PostList.css';
 import {connect} from 'react-redux';
-import {fetchPosts} from '../actions';
+import {fetchPostsAndUsers} from '../actions';
 import PersonIcon from '@material-ui/icons/Person';
 
 class PostList extends React.Component {
 
     componentDidMount(){
-        this.props.fetchPosts();
+        this.props.fetchPostsAndUsers();
     }
     
     renderList(){
@@ -41,5 +41,5 @@ const mapStateToProps = (state) =>{
 }
 
 export default connect(mapStateToProps,{
-    fetchPosts:fetchPosts
+    fetchPostsAndUsers:fetchPostsAndUsers
 })(PostList)
